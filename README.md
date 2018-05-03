@@ -1,24 +1,22 @@
-# README
+# FEMA-API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple REST API that gives access to natural disasters in the US based on the FEMA datset: https://www.fema.gov/api/open/v1/DisasterDeclarationsSummaries.csv
 
-Things you may want to cover:
+Datase legends can be found here:
+https://www.fema.gov/openfema-dataset-disaster-declarations-summaries-v1
+https://www.fema.gov/pdf/library/2300_15ch7.pdf
 
-* Ruby version
+Built-in filtering by state, year, disaster type, and incident type.
 
-* System dependencies
+Deployed on Heroku:
+https://fema-api.herokuapp.com/
 
-* Configuration
+| Endpoints:                        | Functionality                       |
+| ----------------------------------|-------------------------------------|
+| GET /declarations                 | List all declarations               |
+| GET /declarations/:id             | Get a declaration by id             |
+| GET /declarations?state=CA        | List declarations by state          |
+| GET /declarations?year=1992       | List declarations by year           |
+| GET /declarations?disaster=DR     | List declarations by disaster type  |
+| GET /declarations?incident=Flood  | List declarations by incident type  |
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
